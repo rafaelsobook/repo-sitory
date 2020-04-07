@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+
+--another-verylight:#f3e9d2;
+--mid-light: #fd0054;
+--dark-color:#a80038;
+--verydark-color:#2b2024; 
+--secondary: #e4004c;
+--try-color:#3f3d56;
+
+/* ------- FONTS --------*/
+--comic-nue: 'Comic Neue', cursive;
+--open-source: 'Source Sans Pro', sans-serif;
+
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    scroll-behavior: smooth;
+    background-color: var(--another-verylight);
+}
+/*------------------------ HEADER PART -----------------------*/
+.mainHeader{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.mainHeader::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: var(--verydark-color);
+    bottom: 0;
+    opacity: .4;
+    
+}
+.logo{
+    line-height: 50px;
+    font-family: sans-serif;
+    margin-left: 8px;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 15px;
+    background:var(--another-verylight);
+    bottom: -2px;
+    left: 0;
+}
+.logo::after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 25px;
+    background:var(--another-verylight);
+    bottom: -2px;
+    right: 0;
+}
+.setting, .menu{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: var(--verydark-color);
+    border-radius: 2px;
+}
+.setting{
+    right: 60px;
+}
+.alignment{
+    position: relative;
+    height: 40px;
+    width: 120px;
+    top: 8px;
+}
+.menu{
+    transition: .5s;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.linez{
+    transition: .5s;
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background: var(--another-verylight);
+    
+}
+.linez::before{
+    transition: .5s;
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 20px;
+    background: var(--another-verylight);
+    top: -6px;
+}
+.linez::after{
+    transition: .5s;
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 20px;
+    background: var(--another-verylight);
+    top: 6px;
+}
+.mclick{
+    transition: .5s;
+    border-radius: 50%;
+    border: 1px solid #fd0054;
+    background: none;
+}
+
+.mclick .linez{
+    transition: .5s;
+   transform: translateX(-20px);
+   background: transparent;
+}
+
+.mclick .linez::before{
+    transition: .5s;
+   transform: translate(20px, 6px) rotate(45deg);
+   background: #fd0054;
+}
+
+.mclick .linez::after{
+    transition: .5s;
+   transform: translate(20px, -6px) rotate(-45deg) ;
+   background: #fd0054;
+}
+
+
+/*------------------------------ END OF HEADER ----------------------*/
+
+
+/*------------------------------ INTRODUCTION PART ----------------------*/
+
+.listContainer{
+    min-height: 80vh;
+    position: relative;
+    
+}
+.nameAlign{
+    font-family: var(--open-source);
+    position: absolute;
+    top: 40%;
+    left: 8%;
+}
+.myname{
+    color: var(--verydark-color);
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+.firstPara{
+    color: var(--verydark-color);
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.web, .dev{
+    position: absolute;
+    font-size: 140px;
+    font-weight: 800;
+    z-index: -1;
+   
+    opacity: .8;
+    color: var(--verydark-color);
+    
+}
+.web{
+    top: 80px;
+    left: 10px;
+}
+.dev{
+    margin-top: 20px;
+    display: block;
+}
+.introimg{
+    position: absolute;
+    width: 50%;
+    z-index: -22;
+    right: 10px;
+    top: 70px;
+}
+.introbtn{
+    scroll-behavior: smooth;
+    transition: .5s;
+    position: absolute;
+    padding: 10px 15px;
+    bottom: 20px;
+    background: var(--verydark-color);
+    left: 100px;
+    color: var(--another-verylight);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.introbtn::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -2px;
+    bottom: 0;
+    right: -2px;
+    background: var(--mid-light);
+    transform: rotate(-10deg);
+    z-index: -1;
+    transition: .5s;
+}
+
+.introbtn:hover:before{
+    transition: .5s;
+    transform: rotate(10deg);
+    z-index: -22;
+}
+.introbtn:hover{
+    transition: .5s;
+    color: var(--mid-light);
+    padding: 15px 20px;
+    left: 95px;
+    bottom: 15px;
+}
+
+/*------------------------------ END OF INTRODUCTION ----------------------*/
+
+/*------------------------------ ABOUT PART ----------------------*/
+
+.aboutSection{
+    scroll-behavior: smooth;
+    margin-top: 300px;
+    min-height: 100vh;
+    background: var(--dark-color);
+    transform: skewY(-7deg);
+    position: relative;
+}
+
+.aboutSection::before{
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    background: var(--dark-color);
+    bottom: 0;
+    transform: skewY(14deg) ;   
+}
+.titleabout{
+    position: relative;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color:#364f6b;
+    opacity: .9;
+    z-index: 1;
+    
+}
+.titlecontainer{
+    position: relative;
+    width: 100%;
+    height: 180px;
+  
+    transform: skewY(7deg);
+    top: -120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlepart{
+    
+   position: relative;
+    
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.rebox{
+    position: absolute;
+    border-radius: 15%;
+}
+.reone{
+    height: 12px;
+    width: 12px;
+    top: 44px;
+    left: 25px;
+    background: var(--mid-light);
+    z-index: 1;
+}
+.retwo{
+    height: 17px;
+    width: 17px;
+    top: 33px;
+    left: 30px;
+    background: var(--verydark-color);
+}
+.rethree{
+    height: 19px;
+    width: 19px;
+    top: 42px;
+    left: 40px;
+    background: var(--dark-color)
+}
+
+.refour{
+    height: 14px;
+    width: 14px;
+    top: 31px;
+    left: 49px;
+    background: gray;
+    z-index: -1;
+}
+.refive{
+    height: 21px;
+    width: 21px;
+    top: 36px;
+    left: 55px;
+    background: var(--mid-light);
+    z-index: -1;
+}
+
+
+.kunyare{
+    height: 150px;
+    width: 150px;
+    background: white;
+    margin-left: 30px;
+    margin-top: 24px;
+}
+
+.profile{
+    position: relative;
+    height: 280px;
+    background: var(--verydark-color);
+    width: 450px;
+    display: flex;
+    transform: skewY(7deg);
+    margin: auto auto;
+    padding-top: 60px;
+    opacity: .9;
+    border-radius: 10px;
+}
+
+.titleskill{
+    margin-top: -30px;
+    margin-bottom: 20px;
+    pointer-events: none;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size: 24px;
+    margin-left: -20px;
+    font-size: 20px;
+}
+.myskills{
+    list-style-type: none;
+    margin-left: 10px;
+    color: var(--another-verylight);
+    cursor: pointer;
+}
+
+.myskills li{
+    margin: 10px 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.line{
+    position: absolute;
+    height: 6px;
+   left: 280px;
+    background: linear-gradient(to right, orange, #fd0054) ;
+    margin-top: 6px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    
+}
+.lone{
+    width: 140px;
+}
+.ltwo{
+    width: 100px;
+}
+
+.lthree{
+    width: 50px;
+}
+.lfour{
+    width: 40px;
+}
+.lfive{
+    width: 100px;
+}
+.lsix{
+    width: 80px;
+}
+
+.myPara{
+    transform: skewY(7deg);
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-family: sans-serif;
+    text-align: center;
+    
+color: oldlace;
+    letter-spacing: 1px;
+    opacity: .8;
+    position: relative;
+    z-index: 1;
+}
+.personalbtn{
+    font-family: var(--comic-nue);
+    position: absolute;
+    font-size: 30px;
+    z-index: 26;
+    transform: skewY(7deg);
+    text-decoration: none;
+    color: var(--another-verylight);
+    text-align: center;
+    width: 100%;
+    bottom: 70px;
+}
+.raf{
+    color: orange;
+   filter: brightness(12);
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.twochoices{
+    position: absolute;
+    top: 50px;
+    background-color: var(--verydark-color);
+    width: 100%;
+    height: 100px;
+    transform: skewY(15deg);
+    
+}
+
+
+/*------------------------------ END OF ABOUT SECTION ----------------------*/
+
+/*------------------------------ SERVICES SECTION ----------------------*/
+
+.whatIdo{
+   
+  position: relative;
+  top: 80px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+   color: var(--mid-light);
+   font-family: var(--open-source);
+   font-size: 30px;
+   display: inline-block;
+   letter-spacing: 9px;
+  
+   
+}
+.services{
+    z-index: -22;
+    background: var(--verydark-color);
+}
+.listflex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+}
+.servBox{
+    position: relative;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.title, .description{
+    position: relative;
+    height: 200px;
+    width: 220px;
+    text-align: center;
+}
+.title{
+    transform: translateY(100px);
+    z-index: 1;
+}
+.description{
+    border-radius: 3px;
+    transform: translateY(-100px);
+}
+.title{
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-color);
+    border-radius: 2px;
+    color: var(--another-verylight);
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+.description{
+    transition: .5s;
+    background: var(--another-verylight);
+    color: var(--dark-color);
+    font-family: sans-serif;
+}
+.iconz{
+    width: 140px;
+}
+.servBtn{
+    color: #a80038;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #a80038;
+    position: relative;
+    padding: 5px 10px;
+    line-height: 60px;
+    border-radius: 35px;
+}
+.para{
+    text-align: center;
+   padding: 20px 5px 0 5px;
+    font-size: 14px;
+}
+
+.moveup{
+    transition: .5s;
+    transform: translateY(0);
+}
+.movedown{
+    transition: .5s;
+    transform: translateY(0);
+}
