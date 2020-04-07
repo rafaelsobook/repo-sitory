@@ -3,16 +3,45 @@
 
 let menubtn = document.querySelector('.menu');
 let menubtnkey = false;
+let openmen = document.querySelector('.openMenus')
+
+
+let firstw = document.querySelector('.firstWIn')
+let secondw = document.querySelector('.secondWIn')
+let thirdw = document.querySelector('.thirdWIn')
+let fourthw = document.querySelector('.fourthWIn')
+
+
+
 
 menubtn.addEventListener("click", function(){
    if(!menubtnkey){
     menubtn.classList.add("mclick")
     menubtnkey = true;
+    openmen.classList.add("opennow")
+
+    firstw.classList.add("firstOpen")
+    secondw.classList.add("secondOpen")
+    thirdw.classList.add("thirdOpen")
+    fourthw.classList.add("fourthOpen")
+
+
+
+
 }else{
+    openmen.classList.replace("opennow", "closenow")
     menubtn.classList.remove("mclick")
     menubtnkey = false;
+
+    firstw.classList.remove("firstOpen")
+    secondw.classList.remove("secondOpen")
+    thirdw.classList.remove("thirdOpen")
+    fourthw.classList.remove("fourthOpen")
+    
 }
 })
+
+
 
 // END OF MY ANIMATION IN MY MENU BAR
 
