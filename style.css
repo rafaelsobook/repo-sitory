@@ -326,11 +326,11 @@ color: var(--winter-second);
     font-family: var(--open-source);
     position: absolute;
     top: 40%;
-    left: 8%;
+    left: 4%;
 }
 .myname{
     color: var(--verydark-color);
-    font-size: 40px;
+    font-size: 38px;
     letter-spacing: 3px;
 }
 .firstPara{
@@ -341,7 +341,6 @@ color: var(--winter-second);
 }
 .web, .dev{
     position: absolute;
-    font-size: 140px;
     font-weight: 800;
     z-index: -1;
     opacity: .5;
@@ -349,27 +348,18 @@ color: var(--winter-second);
 }
 
 .web{
-    top: 80px;
+    top: 25%;
     left: 5px;
+    font-size: 110px;
 }
 .dev{
-   
-}
-@media(max-width: 700px){
-    .web{
-      font-size: 110px;
-        top: 120px;
-    }
-    .dev{
-        font-size: 90px;
-      left: 0;
-        text-align: center;
-    }
-
-
-
-
-
+   font-size: 75px;
+   top:48%;
+   width: 100%;
+   text-align: left;
+   letter-spacing: 6px;
+   padding-left: 10px;
+   padding-right: 5px;
 }
 .introimg{
     position: absolute;
@@ -427,12 +417,10 @@ color: var(--winter-second);
 .aboutSection{
     scroll-behavior: smooth;
     margin-top: 300px;
-    min-height: 100vh;
     background: var(--dark-color);
     transform: skewY(-7deg);
     position: relative;
 }
-
 .aboutSection::before{
     content: '';
     position: absolute;
@@ -442,19 +430,15 @@ color: var(--winter-second);
     bottom: 0;
     transform: skewY(14deg) ;   
 }
-
 .aboutSection::after{
-    content: '';
-    position: absolute;
+content: '';
+position: absolute;
 top: 0;
 background-color:var(--dark-color);
 width: 100%;
 height: 200px;
 transform: skewY(13deg);
 }
-
-
-
 .titleabout{
     box-sizing: none;
     position: relative;
@@ -477,7 +461,6 @@ transform: skewY(13deg);
     justify-content: center;
     align-items: center;
 }
-
 .titlepart{
     position: relative;
     height: 100px;
@@ -513,7 +496,6 @@ transform: skewY(13deg);
     left: 40px;
     background: var(--dark-color)
 }
-
 .refour{
     height: 14px;
     width: 14px;
@@ -530,8 +512,25 @@ transform: skewY(13deg);
     background: var(--mid-light);
     z-index: -1;
 }
-
-
+.myPara{
+    transform: skewY(7deg);
+    font-size: 17px;
+    font-family: sans-serif;
+    text-align: center;
+    color: oldlace;
+    letter-spacing: 1px;
+    opacity: .8;
+    position: relative;
+    z-index: 1;
+   margin-top: -100px;
+   padding: 0 25px;
+}
+.raf{
+    color: orange;
+   filter: brightness(12);
+    letter-spacing: 4px;
+    font-weight: 700;
+}
 .kunyare{
     height: 150px;
     width: 150px;
@@ -542,35 +541,16 @@ transform: skewY(13deg);
 }
 
 .profile{
-   position: relative;
+    position: relative;
     height: 260px;
     background: var(--verydark-color);
     display: flex;
-    transform: skewY(7deg);
+    
     padding-top: 55px;
-    opacity: .9;
     border-radius: 10px;
-    width: 380px;
-   
+    width: 352px;
+    z-index: 5;
 }
-
-@media(max-width: 800px){
-.profile{
-    position: absolute;
-    height: 260px;
-    background: var(--verydark-color);
-    display: flex;
-    transform: skewY(7deg);
-    padding-top: 55px;
-    opacity: .9;
-    border-radius: 10px;
-    width: 380px;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%) skewY(7deg);
-}
-}
-
 .titleskill{
     margin-top: -30px;
     margin-bottom: 20px;
@@ -582,6 +562,7 @@ transform: skewY(13deg);
     font-size: 20px;
 }
 .myskills{
+    position: relative;
     list-style-type: none;
     margin-left: 10px;
     color: var(--another-verylight);
@@ -605,12 +586,11 @@ transform: skewY(13deg);
     
 }
 .lone{
-    width: 110px;
+    width: 81px;
 }
 .ltwo{
-    width: 90px;
+    width: 50px;
 }
-
 .lthree{
     width: 50px;
 }
@@ -618,43 +598,20 @@ transform: skewY(13deg);
     width: 40px;
 }
 .lfive{
-    width: 85px;
+    width: 65px;
 }
 .lsix{
-    width: 80px;
+    width: 38px;
 }
-
-.myPara{
-    transform: skewY(7deg);
-    font-size: 17px;
-    font-family: sans-serif;
-    text-align: center;
-    color: oldlace;
-    letter-spacing: 1px;
-    opacity: .8;
-    position: relative;
-    z-index: 1;
-   margin-top: -100px;
-   padding: 0 25px;
+.profileAlignment{
    
-}
-.personalbtn{
-    font-family: var(--comic-nue);
-    position: absolute;
-    font-size: 30px;
-    z-index: 26;
-    transform: skewY(7deg);
-    text-decoration: none;
-    color: var(--another-verylight);
-    text-align: center;
     width: 100%;
-    bottom: 70px;
-}
-.raf{
-    color: orange;
-   filter: brightness(12);
-    letter-spacing: 4px;
-    font-weight: 700;
+    position: relative;
+    transform: skewY(7deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 5px;
 }
 
 /*------------------------------ END OF ABOUT SECTION ----------------------*/
