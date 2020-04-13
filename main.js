@@ -1,18 +1,15 @@
 
-// THIS THE ANIMATION THAT I USE IN MY MENU BAR
 
+
+// THIS THE ANIMATION THAT I USE IN MY MENU BAR
 let menubtn = document.querySelector('.menu');
 let menubtnkey = false;
 let openmen = document.querySelector('.openMenus')
-
 
 let firstw = document.querySelector('.firstWIn')
 let secondw = document.querySelector('.secondWIn')
 let thirdw = document.querySelector('.thirdWIn')
 let fourthw = document.querySelector('.fourthWIn')
-
-
-
 
 menubtn.addEventListener("click", function(){
    if(!menubtnkey){
@@ -24,11 +21,9 @@ menubtn.addEventListener("click", function(){
     secondw.classList.add("secondOpen")
     thirdw.classList.add("thirdOpen")
     fourthw.classList.add("fourthOpen")
-
-
-
-
+   
 }else{
+    
     openmen.classList.replace("opennow", "closenow")
     menubtn.classList.remove("mclick")
     menubtnkey = false;
@@ -40,8 +35,43 @@ menubtn.addEventListener("click", function(){
     
 }
 })
+//                       animation on my scroll UP buttom
+let arrowup = document.querySelector('.arrowup')
+let menuimg = document.querySelector('.menuimg-scroll')
+let menuOnscroll = document.querySelector('.menu-onscroll')
 
 
+window.addEventListener('scroll', () => {
+
+    if(window.pageYOffset > 150){
+    arrowup.classList.add("arrowupshow")
+    menuOnscroll.classList.replace('menuscrollanimateHide', 'menuscrollanimate')
+ 
+    menuOnscroll.classList.add('menuscrollanimate')
+    }else{
+    arrowup.classList.remove("arrowupshow")
+    menuOnscroll.classList.replace('menuscrollanimate', 'menuscrollanimateHide')
+    }
+
+
+   
+})
+
+window.addEventListener('scroll', () => {
+
+    if(window.pageYOffset > 1450){
+        menuOnscroll.classList.add("menuscrollInvert")
+    }else{
+        menuOnscroll.classList.remove("menuscrollInvert")
+    }
+
+
+})
+
+let aboutSec = document.querySelector('.aboutSection')
+
+
+console.log(aboutSec.pageYOffset);
 
 // END OF MY ANIMATION IN MY MENU BAR
 
@@ -69,11 +99,9 @@ titles.addEventListener("click", function(){
         maintenanz = true
     }else{
         titles.classList.remove("moveup")
-        
         description.classList.remove("moveup")
         maintenanz = false
     }
-        
 })
 
 bwebsite.addEventListener("click", function(){

@@ -30,12 +30,12 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body{
     scroll-behavior: smooth;
     background-color: var(--another-verylight);
 }
 /*------------------------ HEADER PART -----------------------*/
+
 .mainHeader{
     position: relative;
     display: flex;
@@ -49,7 +49,6 @@ body{
     background: var(--verydark-color);
     bottom: 0;
     opacity: .4;
-    
 }
 .logo{
     line-height: 50px;
@@ -76,13 +75,74 @@ body{
 }
 .setting, .menu{
     position: absolute;
-    height: 30px;
-    width: 30px;
-    background-color: var(--verydark-color);
-    border-radius: 2px;
+    height: 35px;
+    width: 35px;
+   background: var(--verydark-color);
+   opacity: .8;
+    border-radius: 5pxpx;   
 }
 .setting{
-    right: 60px;
+    right: 56px;
+    
+}
+.menu{
+    position: absolute;
+    transition: .5s;
+    right: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 99;
+}
+.linez{
+    transition: .5s;
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background-color: var(--another-verylight);
+}
+.linez::before{
+    transition: .5s;
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 25px;
+   background-color: var(--another-verylight);
+    top: -7px;
+}
+.linez::after{
+    transition: .5s;
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 25px;
+    background-color: var(--another-verylight);
+    top: 7px;
+}
+.mclick{
+    position: fixed;
+    transition: .5s;
+    border-radius: 50%;
+    border: 1px solid #fd0054;
+    background: none;   
+}
+.mclick .linez{
+    transition: .5s;
+   transform: translateX(-20px);
+   background: transparent;
+}
+
+.mclick .linez::before{
+    transition: .5s;
+   transform: translate(20px, 7px) rotate(45deg);
+   background: #fd0054;
+}
+
+.mclick .linez::after{
+    transition: .5s;
+   transform: translate(20px, -7px) rotate(-45deg) ;
+   background: #fd0054;
 }
 .alignment{
     position: relative;
@@ -108,10 +168,8 @@ body{
 }
 .closenow{
     animation: scrollups .2s ease-in-out forwards;
-
 }
 .opennow{
-    
     animation: scrolldo .4s ease-in-out forwards;
 }
 @keyframes scrolldo{
@@ -131,19 +189,16 @@ body{
         transform: scaleY(0);
     }
     }
-
-
 .spectate{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    
 }
 .firstWIn{
     position: fixed;
-   height: 28%;
+   height: 26%;
     width: 100%;
     background: var(--winter-fourth);
     transform-origin: top;
@@ -152,7 +207,7 @@ body{
 }
 .secondWIn{
     position: fixed;
-   height: 49%;
+   height: 48%;
     width: 100%;
     background: var(--winter-third);
     transform-origin: top;
@@ -179,7 +234,6 @@ body{
      transform: scaleY(0);
      z-index: 2;
 }
-
 .firstOpen{
     animation: allwinter 1s ease-in-out .2s forwards;   
 }
@@ -223,70 +277,99 @@ color: var(--winter-second);
     color: var(--winter-fourth);
 }
 
+/* ------------------ on scroll MENU HEADER -------*/
+/*<div class="menu-onscroll">
+<div class="menu-scroll-logo">
+<h2 class="scroll-logo">AR creations </h2>    
+</div>
+<div class="menu-scroll-menus">
+<span class="scroll-span">Menu</span><img src="image/caret-down.svg">
+</div>
+</div>*/
 
-.menu{
-    position: absolute;
-    transition: .5s;
-    right: 25px;
+.menu-onscroll{
+    font-family: var(--font-boldsans);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--verydark-color);
+    overflow: hidden;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 2;
+    color: var(--winter-first);
+    transform-origin: top;
+    transform: scaleY(0);
+    
+}
+.menuscrollanimate{
+    
+    animation: menuscrolldown .5s ease-in-out forwards;
+}
+
+.menuscrollanimateHide{
+    
+    animation: menuscrollUp .8s ease-in-out forwards;
+}
+
+@keyframes menuscrolldown {
+    0%{
+        transform: scaleY(0);
+        opacity: 0;
+        filter: blur(5px);
+    }
+    100%{
+        transform: scaleY(1);
+        opacity:.8;
+        filter: blur(0);
+    }
+}
+@keyframes menuscrollUp {
+    0%{
+        transform: scaleY(1);
+        opacity:.5;
+        filter: blur(0);
+        
+    }
+    100%{
+        transform: scaleY(0);
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+.menuscrollInvert{
+    background: var(--winter-first);
+    color: var(--verydark-color);
+    opacity: .9;
+    transition: all 1.8s;
+}
+.menuscrollInvert .menuimg-scroll{
+    filter: invert(0);
+}
+.menu-scroll-logo{
+    position: relative;
+}
+.menu-scroll-menus{
+    position: relative;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+.menuimg-scroll{
+    width: 20px;
     cursor: pointer;
-    z-index: 99;
+    filter: invert(1);
+    opacity: .7;
 }
 
-.linez{
-    transition: .5s;
-    position: absolute;
-    height: 2px;
-    width: 20px;
-    background: var(--another-verylight);
-    
-}
-.linez::before{
-    transition: .5s;
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 20px;
-    background: var(--another-verylight);
-    top: -6px;
-}
-.linez::after{
-    transition: .5s;
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 20px;
-    background: var(--another-verylight);
-    top: 6px;
-}
-.mclick{
-    position: fixed;
-    transition: .5s;
-    border-radius: 50%;
-    border: 1px solid #fd0054;
-    background: none;
-    
+.scroll-span{
+    padding: 0 15px;
 }
 
-.mclick .linez{
-    transition: .5s;
-   transform: translateX(-20px);
-   background: transparent;
-}
-
-.mclick .linez::before{
-    transition: .5s;
-   transform: translate(20px, 6px) rotate(45deg);
-   background: #fd0054;
-}
-
-.mclick .linez::after{
-    transition: .5s;
-   transform: translate(20px, -6px) rotate(-45deg) ;
-   background: #fd0054;
-}
 
 
 /*------------------------------ END OF HEADER ----------------------*/
@@ -297,7 +380,6 @@ color: var(--winter-second);
 .listContainer{
     min-height: 80vh;
     position: relative;
-    
 }
 .nameAlign{
     font-family: var(--open-source);
@@ -311,9 +393,8 @@ color: var(--winter-second);
     letter-spacing: 3px;
 }
 .rafaso{
-    font-weight: 800;
     color: var(--dark-color);
-    opacity: .6;
+    opacity: .8;
 }
 .firstPara{
     color: var(--verydark-color);
@@ -343,7 +424,6 @@ color: var(--winter-second);
     letter-spacing: 8px;
     opacity: .7;
 }
-
 .introimg{
     position: absolute;
     width: 50%;
@@ -392,6 +472,48 @@ color: var(--winter-second);
     left: 95px;
     bottom: 15px;
 }
+.arrowup{
+    transition: 1s;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    border-radius: 50px;
+    z-index: 55;
+    right: 30px;
+    bottom: 20px;
+    overflow: hidden;
+    opacity: 1;
+    background: url(image/up.svg) no-repeat;
+    opacity: 0;
+    animation: arrowAnimation 1.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.input[type="radio"]:checked ~ i {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+}
+
+.arrowupshow{
+opacity: .8;
+pointer-events: visible;
+}
+@keyframes arrowAnimation{
+
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+
+}
+
 
 /*------------------------------ END OF INTRODUCTION ----------------------*/
 
@@ -528,11 +650,11 @@ transform: skewY(13deg);
     height: 260px;
     background: var(--verydark-color);
     display: flex;
-    
     padding-top: 55px;
     border-radius: 10px;
     width: 352px;
     z-index: 5;
+    margin-bottom: 50px;
 }
 .titleskill{
     margin-top: -30px;
@@ -602,7 +724,6 @@ transform: skewY(13deg);
 /*------------------------------ SERVICES SECTION ----------------------*/
 
 .whatIdo{
-   
   position: relative;
   top: 80px;
   width: 100%;
@@ -612,9 +733,7 @@ transform: skewY(13deg);
    font-family: var(--open-source);
    font-size: 30px;
    display: inline-block;
-   letter-spacing: 9px;
-  
-   
+   letter-spacing: 9px;  
 }
 .services{
     z-index: -22;
@@ -638,21 +757,19 @@ transform: skewY(13deg);
     width: 300px;
     text-align: center;
 }
-.title{
-    transform: translateY(100px);
-    z-index: 1;
-}
 .description{
     border-radius: 3px;
     transform: translateY(-100px);
 }
 .title{
+    transform: translateY(100px);
+    z-index: 1;
     transition: .5s;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background: var(--dark-color);
+    align-items: center;
     border-radius: 2px;
     color: var(--another-verylight);
     font-family: monospace;
@@ -682,7 +799,6 @@ transform: skewY(13deg);
    padding: 20px 5px 10px 5px;
     font-size: 14px;
 }
-
 .moveup{
     transition: .5s;
     transform: translateY(0);
