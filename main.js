@@ -68,10 +68,14 @@ window.addEventListener('scroll', () => {
 
 })
 
-let aboutSec = document.querySelector('.aboutSection')
+// animation in my settings ICON
+let settingIcon = document.querySelector('.setting')
+let setadd = 45
 
-
-console.log(aboutSec.pageYOffset);
+settingIcon.addEventListener('click', () => {
+    setadd += 60
+    settingIcon.style.transform = `rotate(${setadd}deg)`
+})
 
 // END OF MY ANIMATION IN MY MENU BAR
 

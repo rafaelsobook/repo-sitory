@@ -83,8 +83,11 @@ body{
 }
 .setting{
     right: 56px;
-    
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .8s;
 }
+
 .menu{
     position: absolute;
     transition: .5s;
@@ -278,14 +281,7 @@ color: var(--winter-second);
 }
 
 /* ------------------ on scroll MENU HEADER -------*/
-/*<div class="menu-onscroll">
-<div class="menu-scroll-logo">
-<h2 class="scroll-logo">AR creations </h2>    
-</div>
-<div class="menu-scroll-menus">
-<span class="scroll-span">Menu</span><img src="image/caret-down.svg">
-</div>
-</div>*/
+
 
 .menu-onscroll{
     font-family: var(--font-boldsans);
@@ -299,7 +295,7 @@ color: var(--winter-second);
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    z-index: 2;
+    z-index: 12;
     color: var(--winter-first);
     transform-origin: top;
     transform: scaleY(0);
@@ -323,7 +319,7 @@ color: var(--winter-second);
     }
     100%{
         transform: scaleY(1);
-        opacity:.8;
+        opacity:1;
         filter: blur(0);
     }
 }
@@ -368,9 +364,50 @@ color: var(--winter-second);
 
 .scroll-span{
     padding: 0 15px;
+   
+}
+/*<div class="scroll-menulist">
+
+    <div class="menulist-down">
+
+    </div>
+    <div class="menulist-line">
+
+    </div>
+
+</div>*/
+.scroll-menulist{
+    position: fixed;
+    top: 50px;
+    
+    width: 200px;
+    right: -17px;
+    background: var(--verydark-color);
+    z-index: 5;
+    display: none;                        /* FOR CONTINUATION ------------------------------------------------------*/
+    justify-content: center;
+    
 }
 
 
+.menuLI{
+    text-align: right;
+    padding: 10px 10px;
+}
+.menuUL{
+    list-style-type: none;
+}
+.lhref{
+    text-decoration: none;
+    color: silver;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+.menulistwhite{
+    background: var(--another-verylight);
+    color: var(--verydark-color);
+}
 
 /*------------------------------ END OF HEADER ----------------------*/
 
@@ -806,4 +843,10 @@ transform: skewY(13deg);
 .movedown{
     transition: .5s;
     transform: translateY(0);
+}
+/* ------------------------------ CONTACT SECTION START -------------*/
+
+#contactSection{
+    height: 50vh;
+    padding: 100px 50px 50px 50px;
 }

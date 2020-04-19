@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<link rel="stylesheet" href="style.css">
 <body>
 
 <!--                THIS IS THE HEADER PART             -->
@@ -13,7 +14,9 @@
 <h2 class="logo" id="#homeSection">AR creations</h2>
 
 <div class="alignment">
-<div class="setting"></div>
+<div class="setting">
+<img src="image/gear.svg" alt="settingicon"class="settingIcon">
+</div>
 
 <div class="menu">
     <div class="linez"></div> 
@@ -23,10 +26,6 @@
 
 <!--   All SCROLL EFFECTS    -->
 <a href="#homesection" class="arrowup"></a>
-
-
-
-
 
 
 <!--   END OF All SCROLL EFFECTS     -->
@@ -53,6 +52,20 @@
 <div class="menu-scroll-menus">
 <span class="scroll-span">Menu</span><img src="image/caret-down.svg" class="menuimg-scroll">
 </div>
+</div>
+
+<div class="scroll-menulist">
+
+    <div class="menulist-down">
+     <ul class="menuUL">
+         <li class="menuLI"><a href="#homesection" class="lHome lhref">Home</a></li>
+         <li class="menuLI"><a href="#aboutsec" class="labout lhref">About</a></li>
+         <li class="menuLI"><a href="#servicesSec" class="lserv lhref">Services</a></li>
+         <li class="menuLI"><a href="#" class="lcontact lhref">Contact</a></li>
+     </ul>
+    </div>
+    
+
 </div>
 
 
@@ -200,9 +213,25 @@ since i start making websites, and until now it still triggers my interest. <br>
     <p class="para"><br><br>there are multiples of way in making website, and i am capable of using html,css,bootstrap,Wordpress and wix</p>
     <a href="#" class="servBtn">Go here</a>
 </div>
-    
+</div>
 </div>
 
+<div class="contactform" id="contactSection">
+
+    <form action="POST" data-netlify="true">
+
+
+    <input type="text" name="subject" id="subject" placeholder="Subject">
+
+
+    <input type="email" name="email" id="email" placeholder="Email">
+
+    <textarea name="text" name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
+
+    <input type="submit" value="Submit">
+
+    </form>
+
 
 
 
@@ -215,7 +244,6 @@ since i start making websites, and until now it still triggers my interest. <br>
 
 
 </div>
-
 
 <script src="main.js" type="text/javascript"></script>
 </body>
