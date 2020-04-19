@@ -845,8 +845,108 @@ transform: skewY(13deg);
     transform: translateY(0);
 }
 /* ------------------------------ CONTACT SECTION START -------------*/
+/*<div class="contactform" id="contactSection">
 
+    <form action="POST" data-netlify="true">
+    
+    <h2 class="contactHeader">Contact Form</h2>
+<div class="contactJustify">
+<div class="contactAlign">    
+    <input type="text" name="subject" id="subject" placeholder="Subject">
+</div>
+<div class="contactAlign">
+    <input type="email" name="email" id="email" placeholder="Email">
+</div>
+
+<div class="contactAlign">
+    <textarea name="text" name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
+</div>
+    <input type="submit" value="Submit">
+</div>
+    </form>*/
 #contactSection{
-    height: 50vh;
     padding: 100px 50px 50px 50px;
+    background: var(--another-verylight);
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactJustify{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contactAlign{
+    margin: 20px 0;
+    position: relative;
+    
+}
+
+input, textarea{
+    background: none;
+    border: none;
+    position: relative;
+   font-size: 20px;
+   color: var(--another-verylight);
+   opacity: .8;
+  
+}
+input::placeholder, textarea::placeholder{
+    color: var(--another-verylight);
+}
+.contactAlign::before{
+    content: '';
+    position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+    background: var(--dark-color);
+}
+.contactBtnCenter{
+    width: 100%;
+    text-align: center;
+}
+#contactBtn{
+    cursor: pointer;
+   text-align: center;
+   transform: translateY(30px);
+   letter-spacing: 2px;
+   border-radius: 35px;
+   border: 2px solid #a80038;
+   padding: 10px 13px;
+   color: var(--dark-color);
+   opacity: 1;
+}
+.contactHeader{
+    transform: translate(-20px, -50px);
+    font-family: var(--open-source);
+    letter-spacing: 3px;
+    color: var(--verydark-color);
+    opacity: .8;
+    font-size: 32px;
+}
+/*<div class="Projectfooter">
+<span class="footerCaption">AR creations</span>
+</div>*/
+
+.Projectfooter{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    opacity: .8;
+}
+
+.footerCaption{
+    color: white;
+    font-family: sans-serif;
+    opacity: 1;
+    letter-spacing: 3px;
 }
