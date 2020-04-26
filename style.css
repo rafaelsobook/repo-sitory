@@ -762,7 +762,7 @@ transform: skewY(13deg);
 
 .whatIdo{
   position: relative;
-  top: 80px;
+  top: 60px;
   width: 100%;
   text-align: center;
   z-index: 1;
@@ -771,6 +771,7 @@ transform: skewY(13deg);
    font-size: 30px;
    display: inline-block;
    letter-spacing: 9px;  
+   margin: 70px 0;
 }
 .services{
     z-index: -22;
@@ -782,11 +783,18 @@ transform: skewY(13deg);
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 80px;
+    padding-bottom: 50px;
 }
 .servBox{
     position: relative;
-    margin: 0 15px;
+    margin: 20px 15px;
     cursor: pointer;
+    transition: all 2s;
+}
+.servBoxmargin{
+    transition: all 2s;
+    margin: 20px 15px;
+
 }
 .title, .description{
     position: relative;
@@ -845,28 +853,9 @@ transform: skewY(13deg);
     transform: translateY(0);
 }
 /* ------------------------------ CONTACT SECTION START -------------*/
-/*<div class="contactform" id="contactSection">
-
-    <form action="POST" data-netlify="true">
-    
-    <h2 class="contactHeader">Contact Form</h2>
-<div class="contactJustify">
-<div class="contactAlign">    
-    <input type="text" name="subject" id="subject" placeholder="Subject">
-</div>
-<div class="contactAlign">
-    <input type="email" name="email" id="email" placeholder="Email">
-</div>
-
-<div class="contactAlign">
-    <textarea name="text" name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
-</div>
-    <input type="submit" value="Submit">
-</div>
-    </form>*/
 #contactSection{
     padding: 100px 50px 50px 50px;
-    background: var(--another-verylight);
+   background-color: var(--another-verylight);
     height: 100vh;
     position: relative;
     display: flex;
@@ -915,7 +904,6 @@ input::placeholder, textarea::placeholder{
 #contactBtn{
     cursor: pointer;
    text-align: center;
-   transform: translateY(30px);
    letter-spacing: 2px;
    border-radius: 35px;
    border: 2px solid #a80038;
@@ -924,12 +912,12 @@ input::placeholder, textarea::placeholder{
    opacity: 1;
 }
 .contactHeader{
-    transform: translate(-20px, -50px);
     font-family: var(--open-source);
     letter-spacing: 3px;
     color: var(--verydark-color);
     opacity: .8;
-    font-size: 32px;
+    font-size: 38px;
+    margin-bottom: 50px;
 }
 /*<div class="Projectfooter">
 <span class="footerCaption">AR creations</span>

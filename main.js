@@ -110,12 +110,15 @@ titles.addEventListener("click", function(){
 
 bwebsite.addEventListener("click", function(){
     if(!websites){
+        
         bwebsite.classList.add("moveup")
         bwebsitedef.classList.add("moveup")
+        
         websites = true
     }else{
         bwebsite.classList.remove("moveup")
         bwebsitedef.classList.remove("moveup")
+        
        websites = false
     }
 })
